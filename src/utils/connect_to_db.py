@@ -11,7 +11,7 @@ def connect_to_db():
             user=os.getenv("DB_USER"),
             password=os.getenv("DB_PASSWORD"),
         )
-        print("Successful connection")
+        print("Successful connection!")
         return conn
     except Exception as e:
         print(f"Error connecting to the database: {e}")

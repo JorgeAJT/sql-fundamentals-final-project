@@ -4,6 +4,7 @@ CREATE TABLE mandate_data
     business_partner_id varchar(200) UNIQUE,
     brand brand_enum,
     mandate_status varchar(50),
+    collection_frequency varchar(50),
     row_update_datetime timestamp,
     row_create_datetime timestamp,
     changed_by varchar(150),

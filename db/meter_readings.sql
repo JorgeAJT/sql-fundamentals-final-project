@@ -1,6 +1,6 @@
 CREATE TABLE meter_readings
 (
-    meter_readings_id int PRIMARY KEY,
+    meter_readings_id SERIAL PRIMARY KEY,
     meter_number varchar(200) UNIQUE,
     connection_ean_code varchar(200) UNIQUE,
     account_id varchar(200) UNIQUE,
