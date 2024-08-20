@@ -1,3 +1,3 @@
-from .connect_to_db import connect_to_db
+from .database_connection import database_connection
 from .read_json_file import read_json_file
-from .insert_into_db import insert_into_db
+from .database_insertions import database_insertions
