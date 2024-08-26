@@ -1,6 +1,6 @@
-from src.utils import database_connection, read_json_file, database_insertions
+from src.utils import database_connection, read_json_file, database_insertions, database_insertions_batch
 
-def database_insertions():
+def run_database_insertions():
     try:
         print("Connecting with the db ...")
         conn = database_connection()

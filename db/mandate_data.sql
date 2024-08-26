@@ -1,7 +1,7 @@
 CREATE TABLE mandate_data
 (
     mandate_id int PRIMARY KEY,
-    business_partner_id varchar(200) UNIQUE,
+    business_partner_id varchar(200),
     brand brand_enum,
     mandate_status varchar(50),
     collection_frequency varchar(50),

@@ -1,1 +1,1 @@
-from .app import database_insertions
+from .app import run_database_insertions

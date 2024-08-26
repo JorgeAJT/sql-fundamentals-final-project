@@ -10,15 +10,13 @@ def database_insertions(conn, table_name, json_data):
 
     data_to_insert = []
     for item in json_data:
-        values = []
+        row = []
         for column in columns:
             value = item.get(column, None)
             if isinstance(value, dict):
                 value = json.dumps(value)
-            elif value is None:
-                value = 'NULL'
-            values.append(value)
-        data_to_insert.append(values)
+            row.append(value)
+        data_to_insert.append(row)
 
     execute_values(cursor, insert_statement, data_to_insert)
     print("Insertion done correctly!")

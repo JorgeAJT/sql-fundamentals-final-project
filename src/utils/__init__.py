@@ -1,3 +1,4 @@
 from .database_connection import database_connection
 from .read_json_file import read_json_file
 from .database_insertions import database_insertions
+from .database_insertions_batch import database_insertions_batch
