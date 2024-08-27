@@ -18,7 +18,8 @@ def database_insertions_batch(conn, table_name, json_data):
             row.append(value)
         data_to_insert.append(row)
 
-    execute_batch(cursor, insert_statement, data_to_insert)
-    print("Insertion done correctly!")
+    execute_batch(cursor, insert_statement, data_to_insert, page_size=1000)
     conn.commit()
+
+    print(f"All insertion in {table_name} done correctly!")
     cursor.close()
