@@ -23,3 +23,5 @@ def database_insertions_batch(conn, table_name, json_data):
 
     print(f"All insertion in {table_name} done correctly!")
     cursor.close()
+
+    return True
