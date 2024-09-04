@@ -1,10 +1,10 @@
 CREATE TABLE meter_data
 (
-    meter_number varchar(250) PRIMARY KEY,
-    connection_ean_code varchar(200) UNIQUE,
-    business_partner_id varchar(200) UNIQUE,
+    meter_data_id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    meter_number varchar(250),
+    connection_ean_code varchar(200),
+    business_partner_id varchar(200),
     brand brand_enum,
-    utility_type utility_type_enum,
     grid_company_code varchar(200),
     oda_code varchar(200),
     smart_collectable varchar(50),
