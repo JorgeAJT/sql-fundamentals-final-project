@@ -5,7 +5,7 @@ CREATE TABLE meter_readings
     connection_ean_code varchar(200),
     account_id varchar(200),
     brand brand_enum,
-    energy_type varchar(200),
+    energy_type energy_type_enum,
     reading_date date,
     reading_electricity text,
     reading_gas text,
