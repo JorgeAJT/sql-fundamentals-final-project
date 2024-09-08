@@ -1,23 +1,29 @@
 import os
 import psycopg2
 import json
+import logging
 from dotenv import load_dotenv
 from typing import List, Dict, Any
 
+
 def database_connection() -> psycopg2.extensions.connection:
+    logging.info("Connecting with the db ...")
+
     load_dotenv()
     conn = psycopg2.connect(
         dbname=os.getenv("DB_NAME"),
         user=os.getenv("DB_USER"),
         password=os.getenv("DB_PASSWORD"),
     )
-    print("Successful connection!")
+    logging.info("Successful connection!")
     return conn
 
 
 def database_insertions(conn: psycopg2.extensions.connection,
                         table_name: str,
                         json_data: List[Dict[str, Any]]) -> bool:
+    logging.info(f"Inserting data into '{table_name}' table...")
+
     cursor = conn.cursor()
 
     columns = list(json_data[0].keys())
@@ -37,7 +43,7 @@ def database_insertions(conn: psycopg2.extensions.connection,
     psycopg2.extras.execute_values(cursor, insert_statement, data_to_insert, page_size=1000)
     conn.commit()
 
-    print(f"All insertion in {table_name} done correctly!")
+    logging.info(f"All insertions in {table_name} done correctly!")
     cursor.close()
 
     return True
