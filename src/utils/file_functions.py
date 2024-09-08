@@ -25,6 +25,9 @@ def fetch_data_as_json(conn: connection, query: str, filename: str) -> bool:
     cursor.execute(query)
 
     rows = cursor.fetchall()
+    if not rows:
+        logging.warning("No data found for the given query.")
+
     data = [dict(row) for row in rows]
 
     file_path = f'./data/{filename}'
