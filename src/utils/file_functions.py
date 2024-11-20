@@ -27,14 +27,11 @@ def fetch_data_as_json(conn: connection, query: str, filename: str) -> bool:
     rows = cursor.fetchall()
     if not rows:
         logging.warning("No data found for the given query.")
-
-    data = [dict(row) for row in rows]
+        return False
 
     file_path = f'./data/{filename}'
-
-    json_file = open(file_path, 'x')
-    json_file.write(json.dumps(data, default=str, indent=4))
-    json_file.close()
+    with open(file_path, 'x') as json_file:
+        json_file.write(json.dumps(rows, default=str, indent=4))
 
     logging.info("File created and data written correctly")
 
