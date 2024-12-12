@@ -1,6 +1,2 @@
-from .database_connection import database_connection
-from .read_json_file import read_json_file
-from .database_insertions import database_insertions
-from .database_insertions_batch import database_insertions_batch
-from .insert_data_from_json import insert_data_from_json
-from .fetch_data_as_json import fetch_data_as_json
+from .database_functions import database_connection, database_insertions
+from .file_functions import read_json_file, insert_data_from_json, fetch_data_as_json
