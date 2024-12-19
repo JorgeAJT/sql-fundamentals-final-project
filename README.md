@@ -15,7 +15,6 @@ This project demonstrates how to insert large datasets from JSON files into a Po
 - Docker Desktop (optional, if running PostgreSQL in a container)
 
 ## Project Structure
-    ```bash
     .
     ├── main.py                   # Entry point of the application
     ├── .env                      # Environment variables (not in repo)
@@ -53,7 +52,6 @@ This project demonstrates how to insert large datasets from JSON files into a Po
 
 Run the main script to insert data and extract selected rows:
 
-    ```bash
     python main.py
     
 - Data is inserted into the meter_data, meter_readings, and mandate_data tables.
