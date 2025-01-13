@@ -10,9 +10,9 @@ This project demonstrates how to insert large datasets from **JSON** files into 
 
 ## System Requirements
 
-- Python 3.x
-- PostgreSQL (latest version recommended)
-- Docker Desktop (optional, if running PostgreSQL in a container)
+- **Python 3.x**
+- **PostgreSQL** (latest version recommended)
+- **Docker Desktop** (optional, if running PostgreSQL in a container)
 
 ## Project Structure
     .
@@ -100,4 +100,4 @@ Please follow these steps:
 
 ## Author
 
-Jorge Jiménez - JorgeAJT
+:man_technologist: Jorge Jiménez - [JorgeAJT](https://github.com/JorgeAJT) :weight_lifting_man:
