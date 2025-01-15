@@ -1,6 +1,32 @@
 # JSON to PostgreSQL and Reverse Transformation
 
-This project demonstrates how to insert large datasets from **JSON** files into a **PostgreSQL** database and extract selected data back into a JSON file. It includes database table creation, data insertion, and JSON conversion.
+This project demonstrates how to insert large datasets from JSON files into a **PostgreSQL** database and extract selected data back into a JSON file. It includes **database table creation**, **data insertion**, and **JSON conversion** processes, organized with clear, reusable utility modules.
+
+## Table of Contents
+
+1. [Overview](#overview)
+
+2. [Features](#features)
+
+3. [Requirements](#requirements)
+
+4. [Project Structure](#project-structure)
+
+5. [Setup](#setup)
+
+6. [Usage](#usage)
+
+7. [Key Components](#key-components)
+
+    - [Database Operations](#database-operations)
+
+    - [File Operations](#file-operations)
+
+    - [Logging](#logging)
+
+11. [Contributing](#contributing)
+
+12. [Author](#author)
 
 ## Features
 
@@ -8,7 +34,7 @@ This project demonstrates how to insert large datasets from **JSON** files into 
 - **Data Extraction**: Exports filtered data from the database to a JSON file.
 - **Structured Code**: Organized into reusable utilities for database and file operations.
 
-## System Requirements
+## Requirements
 
 - **Python 3.x**
 - **PostgreSQL** (latest version recommended)
