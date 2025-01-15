@@ -103,7 +103,7 @@ By following the steps below, you’ll be able to replicate or extend this funct
     ```
     Or install manually:
     ```bash
-    pip install uvicorn psycopg2
+    pip install psycopg2-binary python-dotenv
     ```
 
 3. Create a `.env` File  
