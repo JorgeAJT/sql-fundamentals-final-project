@@ -106,7 +106,7 @@ By following the steps below, you’ll be able to replicate or extend this funct
     pip install uvicorn psycopg2
     ```
 
-3. Create a `.env` File
+3. Create a `.env` File  
 In the project root, create a file named `.env` with your PostgreSQL credentials:
     ```bash
     DB_NAME=your_db_name
