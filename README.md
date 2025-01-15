@@ -117,38 +117,60 @@ In the project root, create a file named `.env` with your PostgreSQL credentials
 
 4. Set Up the Database
 
-Ensure PostgreSQL is running (either locally or via Docker).
-Run the SQL scripts located in the db/ folder to create the required tables (meter_data, meter_readings, mandate_data, etc.).
-Verify that your user has permission to read/write these tables.
-Prepare JSON Data
+    - Ensure PostgreSQL is running (either locally or via Docker).
+    - Run the SQL scripts located in the `db/` folder to create the required tables (`meter_data`, `meter_readings`, `mandate_data`, etc.).
+    - Verify that your user has permission to read/write these tables.
+      
+5. Prepare JSON Data
 
-Place your source JSON files into the data/ folder.
-The scripts will look for these files when inserting records.
+    - Place your source JSON files into the `data/` folder.
+    - The scripts will look for these files when inserting records.
 
 ## Usage
 
-Run the main script to insert data and extract selected rows:
-
+1. **Execute the Main Script**
+    ```bash
     python main.py
-    
-- Data is inserted into the meter_data, meter_readings, and mandate_data tables.
-- Filtered data (e.g., rows with mandate_status = 'N') is exported to data/selected_data.json.
+    ```
+    By default, it will:
+        - Read the specified JSON files (e.g., `data/meter_data.json`)
+        - Insert the data into the corresponding tables (`meter_data`, `meter_readings`, `mandate_data`)
+        - Filter rows based on certain conditions (for example, `mandate_status = 'N'`)
+        - Export the filtered rows to a JSON file (e.g., `data/selected_data.json`)
+   
+2. **Customize Queries/Logic**
+
+    - Edit `src/app.py` or the utility functions in `src/utils/database_functions.py` to change how data is inserted or which rows are extracted.
+      
+    - Modify `src/utils/file_functions.py` to customize file paths or handle different file formats.
+
+3. **Review Logs (Optional)**
+
+    - Depending on your implementation, you may have logging statements in these utility functions.
+      
+    - Check the logs to confirm data was processed successfully or diagnose issues if something goes wrong.
 
 ## Key Components
 
 ### Database Operations
 
-- **Connection Handling**: database_functions.py manages PostgreSQL connections and bulk insertions.
-- **Dynamic Insertions**: Supports inserting complex data structures.
-
+Located in `src/utils/database_functions.py`:
+    - **Connection Handling**: Manages PostgreSQL connections using credentials from `.env`.
+    - **Bulk Insertions**: Functions to insert complex JSON data into tables without manually specifying each column.
+    - **Custom Queries**: Methods for running queries to filter or transform data before exporting.
+    
 ### File Operations
 
-- **JSON Handling**: file_functions.py reads and writes JSON data efficiently.
-- **Flexible Querying**: Exports results of custom SQL queries to JSON.
+Located in `src/utils/file_functions.py`:
+    - **JSON Handling**: Reads input JSON files and writes output JSON files.
+    - **Data Validation**: Optionally checks file structure before processing.
+    - **Flexible Querying**: Allows you to export the results of custom SQL queries to new JSON files.
 
-## Logging
+### Logging
 
-Logs are generated during database connections, insertions, and file operations for easier debugging.
+- **Debugging**: Log messages (if configured) let you see each step: connection to the database, reading files, inserting rows, exporting JSON, etc.
+    
+- **Troubleshooting**: Errors are logged to help identify where a failure occurred (e.g., invalid file format, connection issues).
 
 ## Contributions
 
