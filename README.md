@@ -133,18 +133,22 @@ In the project root, create a file named `.env` with your PostgreSQL credentials
     python main.py
     ```
     By default, it will:
+   
     - Read the specified JSON files (e.g., `data/meter_data.json`)
+      
     - Insert the data into the corresponding tables (`meter_data`, `meter_readings`, `mandate_data`)
+      
     - Filter rows based on certain conditions (for example, `mandate_status = 'N'`)
+      
     - Export the filtered rows to a JSON file (e.g., `data/selected_data.json`)
    
-2. **Customize Queries/Logic**
+3. **Customize Queries/Logic**
 
     - Edit `src/app.py` or the utility functions in `src/utils/database_functions.py` to change how data is inserted or which rows are extracted.
       
     - Modify `src/utils/file_functions.py` to customize file paths or handle different file formats.
 
-3. **Review Logs (Optional)**
+4. **Review Logs (Optional)**
 
     - Depending on your implementation, you may have logging statements in these utility functions.
       
