@@ -165,9 +165,12 @@ Located in `src/utils/database_functions.py`:
 ### File Operations
 
 Located in `src/utils/file_functions.py`:
-    - **JSON Handling**: Reads input JSON files and writes output JSON files.
-    - **Data Validation**: Optionally checks file structure before processing.
-    - **Flexible Querying**: Allows you to export the results of custom SQL queries to new JSON files.
+
+- **JSON Handling**: Reads input JSON files and writes output JSON files.
+    
+- **Data Validation**: Optionally checks file structure before processing.
+    
+- **Flexible Querying**: Allows you to export the results of custom SQL queries to new JSON files.
 
 ### Logging
 
