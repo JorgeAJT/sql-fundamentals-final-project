@@ -155,9 +155,12 @@ In the project root, create a file named `.env` with your PostgreSQL credentials
 ### Database Operations
 
 Located in `src/utils/database_functions.py`:
-    - **Connection Handling**: Manages PostgreSQL connections using credentials from `.env`.
-    - **Bulk Insertions**: Functions to insert complex JSON data into tables without manually specifying each column.
-    - **Custom Queries**: Methods for running queries to filter or transform data before exporting.
+    
+- **Connection Handling**: Manages PostgreSQL connections using credentials from `.env`.
+    
+- **Bulk Insertions**: Functions to insert complex JSON data into tables without manually specifying each column.
+    
+- **Custom Queries**: Methods for running queries to filter or transform data before exporting.
     
 ### File Operations
 
