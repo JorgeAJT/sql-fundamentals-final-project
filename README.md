@@ -24,9 +24,17 @@ This project demonstrates how to insert large datasets from JSON files into a **
 
     - [Logging](#logging)
 
-11. [Contributing](#contributing)
+8. [Contributing](#contributing)
 
-12. [Author](#author)
+9. [Author](#author)
+
+## Overview
+
+The goal of this project is to **automate** the process of importing JSON data into a PostgreSQL database and exporting filtered rows back to a JSON file. This setup is useful for scenarios where large or complex JSON structures need to be stored, queried, and partially retrieved. The process is broken down into two major steps:
+1. **Data Ingestion**: Reads JSON files and inserts data into relevant PostgreSQL tables.
+2. **Data Extraction**: Performs custom SQL queries on these tables and saves the results into a new JSON file.
+
+By following the steps below, you’ll be able to replicate or extend this functionality in your own PostgreSQL environment.
 
 ## Features
 
