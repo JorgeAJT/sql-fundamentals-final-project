@@ -182,7 +182,7 @@ Located in `src/utils/file_functions.py`:
     
 - **Troubleshooting**: Errors are logged to help identify where a failure occurred (e.g., invalid file format, connection issues).
 
-## Contributions
+## Contributing
 
 Feel free to fork this repository, open issues, or submit pull requests. All contributions are welcome!
 
