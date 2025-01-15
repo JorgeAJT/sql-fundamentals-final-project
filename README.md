@@ -210,3 +210,5 @@ Please follow these steps:
 ## Author
 
 :man_technologist: Jorge Jiménez - [JorgeAJT](https://github.com/JorgeAJT) :weight_lifting_man:
+
+Questions or suggestions? Feel free to open an issue or submit a pull request!
