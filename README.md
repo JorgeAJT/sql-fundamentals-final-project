@@ -12,7 +12,7 @@ This project demonstrates how to insert large datasets from JSON files into a **
 
 4. [Project Structure](#project-structure)
 
-5. [Setup](#setup)
+5. [Installation](#installation)
 
 6. [Usage](#usage)
 
@@ -41,12 +41,14 @@ By following the steps below, you’ll be able to replicate or extend this funct
 - **Data Ingestion**: Inserts data from JSON files into PostgreSQL tables.
 - **Data Extraction**: Exports filtered data from the database to a JSON file.
 - **Structured Code**: Organized into reusable utilities for database and file operations.
+- **Logging**: Generates logs to help trace the data flow and debug issues.
+- **Flexible Querying**: Easily configure which rows or columns get exported.
 
 ## Requirements
 
 - **Python 3.x**
 - **PostgreSQL** (latest version recommended)
-- **Docker Desktop** (optional, if running PostgreSQL in a container)
+- **Docker Desktop** *(optional, if running PostgreSQL in a container)*
 
 ## Project Structure
     .
@@ -61,26 +63,67 @@ By following the steps below, you’ll be able to replicate or extend this funct
     │       ├── __init__.py       # Utility initialization
     │       ├── database_functions.py
     │       └── file_functions.py
+    └── requirements.txt           # Python dependencies
+    
+### Main Files
 
-## Setup
+1. `main.py`
+    
+    - Runs the primary flow: reads JSON files, inserts data, and optionally extracts data to a new JSON file.
 
-1. Clone the repository and navigate to the project directory:
+2. `.env`
+
+    - Holds PostgreSQL credentials (`DB_NAME`, `DB_USER`, `DB_PASSWORD`) and other environment variables.
+      
+3. `data/`
+
+    - Contains JSON files to be ingested, and where the output JSON file (with filtered data) is generated.
+
+4. `db/`
+
+    - Contains SQL scripts for creating the **meter_data**, **meter_readings**, and **mandate_data** tables (or any additional tables).
+
+5. `src/`
+
+    - `app.py`: Central logic for coordinating reading JSON, inserting records, and exporting results.
+
+    - `utils/`: Utility modules for database connections/operations and file handling.
+
+
+## Installation
+
+1. Clone the Repository:
     ```bash
     git clone https://github.com/JorgeAJT/sql-fundamentals-final-project.git
     cd sql-fundamentals-final-project
-
-2. Install the required Python packages:
+    
+2. **Install dependencies** (if you have a `requirements.txt`):
     ```bash
     pip install -r requirements.txt
-    
-3. Create a .env file with your PostgreSQL credentials:
-    ```makefile
+    ```
+    Or install manually:
+    ```bash
+    pip install uvicorn psycopg2
+    ```
+
+3. Create a `.env` File
+In the project root, create a file named `.env` with your PostgreSQL credentials:
+    ```bash
     DB_NAME=your_db_name
     DB_USER=your_db_user
     DB_PASSWORD=your_db_password
-    
-4. Set up the database by running the SQL scripts in the db/ folder.
-5. Place your JSON data files in the data/ folder.
+    ```
+    *These values are used by the utility functions to connect to your PostgreSQL database.*
+
+4. Set Up the Database
+
+Ensure PostgreSQL is running (either locally or via Docker).
+Run the SQL scripts located in the db/ folder to create the required tables (meter_data, meter_readings, mandate_data, etc.).
+Verify that your user has permission to read/write these tables.
+Prepare JSON Data
+
+Place your source JSON files into the data/ folder.
+The scripts will look for these files when inserting records.
 
 ## Usage
 
