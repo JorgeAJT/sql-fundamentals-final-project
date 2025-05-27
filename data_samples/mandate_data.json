@@ -1,0 +1,122 @@
+[
+  {
+    "business_partner_id": "0101869662",
+    "mandate_status": "Y",
+    "collection_frequency": "D",
+    "brand": "ES",
+    "row_update_datetime": "2024-04-25 12:06:43",
+    "row_create_datetime": "2019-07-02 10:00:00",
+    "changed_by": "SYSTEM",
+    "mandate_id": 1,
+    "collection_type": "P4",
+    "metering_consent": "daily_insight"
+  },
+  {
+    "business_partner_id": "0101879132",
+    "mandate_status": "Y",
+    "collection_frequency": "D",
+    "brand": "ES",
+    "row_update_datetime": "2024-04-23 13:05:14",
+    "row_create_datetime": "2019-07-04 10:00:00",
+    "changed_by": "SYSTEM",
+    "mandate_id": 2,
+    "collection_type": "P4",
+    "metering_consent": "daily_insight"
+  },
+  {
+    "business_partner_id": "0104031653",
+    "mandate_status": "Y",
+    "collection_frequency": "D",
+    "brand": "ES",
+    "row_update_datetime": "2024-05-07 20:49:11",
+    "row_create_datetime": "2019-07-30 00:00:00",
+    "changed_by": "SYSTEM",
+    "mandate_id": 3,
+    "collection_type": "P4",
+    "metering_consent": "daily_insight"
+  },
+  {
+    "business_partner_id": "0131040176",
+    "mandate_status": "R",
+    "collection_frequency": "D",
+    "brand": "ED",
+    "row_update_datetime": "2024-05-28 21:15:51",
+    "row_create_datetime": "2019-07-02 10:00:00",
+    "changed_by": "SYSTEM",
+    "mandate_id": 4,
+    "collection_type": "P4",
+    "metering_consent": "daily_insight"
+  },
+  {
+    "business_partner_id": "0132003279",
+    "mandate_status": "R",
+    "collection_frequency": "D",
+    "brand": "ED",
+    "row_update_datetime": "2021-10-11 21:15:33",
+    "row_create_datetime": "2019-07-02 10:00:00",
+    "changed_by": "SYSTEM",
+    "mandate_id": 5,
+    "collection_type": "P4",
+    "metering_consent": "daily_insight"
+  },
+  {
+    "business_partner_id": "0132150941",
+    "mandate_status": "R",
+    "collection_frequency": "D",
+    "brand": "ED",
+    "row_update_datetime": "2020-05-07 21:15:31",
+    "row_create_datetime": "2019-07-02 10:00:00",
+    "changed_by": "SYSTEM",
+    "mandate_id": 6,
+    "collection_type": "P4",
+    "metering_consent": "daily_insight"
+  },
+  {
+    "business_partner_id": "0132158868",
+    "mandate_status": "R",
+    "collection_frequency": "D",
+    "brand": "ED",
+    "row_update_datetime": "2021-11-22 21:15:33",
+    "row_create_datetime": "2019-07-02 10:00:00",
+    "changed_by": "SYSTEM",
+    "mandate_id": 7,
+    "collection_type": "P4",
+    "metering_consent": "daily_insight"
+  },
+  {
+    "business_partner_id": "0132194033",
+    "mandate_status": "Y",
+    "collection_frequency": "D",
+    "brand": "ED",
+    "row_update_datetime": "2024-04-23 13:05:23",
+    "row_create_datetime": "2019-07-02 10:00:00",
+    "changed_by": "SYSTEM",
+    "mandate_id": 8,
+    "collection_type": "P4",
+    "metering_consent": "daily_insight"
+  },
+  {
+    "business_partner_id": "0132330342",
+    "mandate_status": "R",
+    "collection_frequency": "D",
+    "brand": "ED",
+    "row_update_datetime": "2024-05-27 21:15:51",
+    "row_create_datetime": "2019-07-02 10:00:00",
+    "changed_by": "SYSTEM",
+    "mandate_id": 9,
+    "collection_type": "P4",
+    "metering_consent": "daily_insight"
+  },
+  {
+    "business_partner_id": "0132431495",
+    "mandate_status": "R",
+    "collection_frequency": "D",
+    "brand": "ED",
+    "row_update_datetime": "2021-02-04 21:16:52",
+    "row_create_datetime": "2019-07-02 10:00:00",
+    "changed_by": "SYSTEM",
+    "mandate_id": 10,
+    "collection_type": "P4",
+    "metering_consent": "daily_insight"
+  }
+]

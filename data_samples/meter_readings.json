@@ -1,0 +1,122 @@
+[
+  {
+    "account_id": "0100000038",
+    "brand": "ESSENT",
+    "connection_ean_code": "871694840007731243",
+    "energy_type": "ELECTRICITY",
+    "meter_number": "32472376",
+    "reading_date": "2023-11-01",
+    "reading_electricity": {"supplyLow":6249.04,"supplyHigh":6707.903,"returnLow":0.045,"returnHigh":0.0},
+    "reading_gas": null,
+    "rejection": null,
+    "validation_status": "VALID"
+  },
+  {
+    "account_id": "0100000364",
+    "brand": "ESSENT",
+    "connection_ean_code": "871694840008582417",
+    "energy_type": "ELECTRICITY",
+    "meter_number": "14986173",
+    "reading_date": "2023-11-01",
+    "reading_electricity": {"supplyLow":18374.188,"supplyHigh":15711.39,"returnLow":5615.761,"returnHigh":13665.996},
+    "reading_gas": null,
+    "rejection": null,
+    "validation_status": "VALID"
+  },
+  {
+    "account_id": "0100000025",
+    "brand": "ESSENT",
+    "connection_ean_code": "871694840008583575",
+    "energy_type": "ELECTRICITY",
+    "meter_number": "55933",
+    "reading_date": "2023-11-01",
+    "reading_electricity": {"supplyLow":8252.261,"supplyHigh":12784.845,"returnLow":0.0,"returnHigh":0.0},
+    "reading_gas": null,
+    "rejection": null,
+    "validation_status": "VALID"
+  },
+  {
+    "account_id": "0100000364",
+    "brand": "ESSENT",
+    "connection_ean_code": "871694840015047879",
+    "energy_type": "GAS",
+    "meter_number": "5612045359",
+    "reading_date": "2023-11-01",
+    "reading_electricity": null,
+    "reading_gas": {"gasTotal":14205.243},
+    "rejection": null,
+    "validation_status": "VALID"
+  },
+  {
+    "account_id": "0100000025",
+    "brand": "ESSENT",
+    "connection_ean_code": "871694840015049002",
+    "energy_type": "GAS",
+    "meter_number": "3401345208",
+    "reading_date": "2023-11-01",
+    "reading_electricity": null,
+    "reading_gas": {"gasTotal":11029.055},
+    "rejection": null,
+    "validation_status": "VALID"
+  },
+  {
+    "account_id": "0100000038",
+    "brand": "ESSENT",
+    "connection_ean_code": "871694840014449711",
+    "energy_type": "GAS",
+    "meter_number": "33896593",
+    "reading_date": "2023-11-01",
+    "reading_electricity": null,
+    "reading_gas": {"gasTotal":3540.989},
+    "rejection": null,
+    "validation_status": "VALID"
+  },
+  {
+    "account_id": "0100000248",
+    "brand": "ESSENT",
+    "connection_ean_code": "871694840008310843",
+    "energy_type": "ELECTRICITY",
+    "meter_number": "15491193",
+    "reading_date": "2023-11-01",
+    "reading_electricity": {"supplyLow":5205.16,"supplyHigh":7913.216,"returnLow":663.983,"returnHigh":1415.775},
+    "reading_gas": null,
+    "rejection": null,
+    "validation_status": "VALID"
+  },
+  {
+    "account_id": "0100000229",
+    "brand": "ESSENT",
+    "connection_ean_code": "871694840008558924",
+    "energy_type": "ELECTRICITY",
+    "meter_number": "138533",
+    "reading_date": "2023-11-01",
+    "reading_electricity": {"supplyLow":366.912,"supplyHigh":289.982,"returnLow":271.551,"returnHigh":604.998},
+    "reading_gas": null,
+    "rejection": null,
+    "validation_status": "VALID"
+  },
+  {
+    "account_id": "0100000248",
+    "brand": "ESSENT",
+    "connection_ean_code": "871694840014821548",
+    "energy_type": "GAS",
+    "meter_number": "5612102832",
+    "reading_date": "2023-11-01",
+    "reading_electricity": null,
+    "reading_gas": {"gasTotal":7691.261},
+    "rejection": null,
+    "validation_status": "VALID"
+  },
+  {
+    "account_id": "0100000026",
+    "brand": "ESSENT",
+    "connection_ean_code": "871694840015810275",
+    "energy_type": "GAS",
+    "meter_number": "5612045469",
+    "reading_date": "2023-11-01",
+    "reading_electricity": null,
+    "reading_gas": {"gasTotal":11654.152},
+    "rejection": null,
+    "validation_status": "VALID"
+  }
+]
