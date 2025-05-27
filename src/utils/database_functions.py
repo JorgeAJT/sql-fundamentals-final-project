@@ -9,11 +9,11 @@ def database_connection() -> psycopg2.extensions.connection:
     logging.info("Connecting with the db_scripts ...")
 
     conn = psycopg2.connect(
-        dbname=os.getenv("DB_NAME"),
-        user=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD"),
+        dbname=os.getenv("DB_NAME", "users-db"),
+        user=os.getenv("DB_USER", "root"),
+        password=os.getenv("DB_PASSWORD", "1234"),
         host=os.getenv("DB_HOST", "127.0.0.1"),
-        port=5432
+        port=os.getenv("DB_PORT", "5432"),
     )
     logging.info("Successful connection!")
     return conn
