@@ -2,14 +2,12 @@ import os
 import psycopg2
 import json
 import logging
-from dotenv import load_dotenv
 from typing import List, Dict, Any
 
 
 def database_connection() -> psycopg2.extensions.connection:
-    logging.info("Connecting with the db ...")
+    logging.info("Connecting with the db_scripts ...")
 
-    load_dotenv()
     conn = psycopg2.connect(
         dbname=os.getenv("DB_NAME"),
         user=os.getenv("DB_USER"),
