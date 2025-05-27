@@ -1,1 +1,5 @@
 data/
+.git/
+__pycache__/
+.envrc
+.venv/
