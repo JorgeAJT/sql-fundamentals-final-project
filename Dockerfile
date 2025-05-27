@@ -8,6 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 ENV DATA_PATH=./data_samples
+ENV ENVIRONMENT=production
 ENV DB_NAME=users-db
 ENV DB_USER=root
 ENV DB_HOST=host.docker.internal

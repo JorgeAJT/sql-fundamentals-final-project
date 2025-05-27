@@ -5,6 +5,8 @@ from src.utils import database_connection, insert_data_from_json, fetch_data_as_
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 DATA_PATH = os.getenv("DATA_PATH", "./data")
+ENVIRONMENT = os.getenv("ENVIRONMENT", "development")
+
 
 def run_database_insertions():
     try:
@@ -14,7 +16,8 @@ def run_database_insertions():
         insert_data_from_json(f"{DATA_PATH}/meter_readings.json", conn, "meter_readings")
         insert_data_from_json(f"{DATA_PATH}/mandate_data.json", conn, "mandate_data")
 
-        fetch_data_as_json(conn, "SELECT * FROM mandate_data WHERE mandate_status = 'N'", 'selected_data.json')
+        if ENVIRONMENT == "development":
+            fetch_data_as_json(conn, "SELECT * FROM mandate_data WHERE mandate_status = 'R'", 'selected_data.json')
 
         conn.close()
     except Exception as e:
