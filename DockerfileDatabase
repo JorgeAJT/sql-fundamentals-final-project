@@ -1,5 +1,6 @@
 FROM postgres:latest
 
-ENV POSTGRES_DB=prueba_db
-ENV POSTGRES_USER=prueba_db
-ENV POSTGRES_PASSWORD=1234
+ENV POSTGRES_DB=users-db
+ENV POSTGRES_USER=root
+
+COPY ./db_scripts /docker-entrypoint-initdb.d/
