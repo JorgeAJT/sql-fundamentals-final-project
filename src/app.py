@@ -1,23 +1,23 @@
-import os
 import logging
 from src.utils import database_connection, insert_data_from_json, fetch_data_as_json
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-DATA_PATH = os.getenv("DATA_PATH", "./data")
-ENVIRONMENT = os.getenv("ENVIRONMENT", "development")
 
-
-def run_database_insertions():
+def run_database_insertions(args, data_path, environment):
     try:
         conn = database_connection()
 
-        insert_data_from_json(f"{DATA_PATH}/meter_data.json", conn, "meter_data")
-        insert_data_from_json(f"{DATA_PATH}/meter_readings.json", conn, "meter_readings")
-        insert_data_from_json(f"{DATA_PATH}/mandate_data.json", conn, "mandate_data")
+        if args.all:
+            insert_data_from_json(f"{data_path}/meter_data.json", conn, "meter_data")
+            insert_data_from_json(f"{data_path}/meter_readings.json", conn, "meter_readings")
+            insert_data_from_json(f"{data_path}/mandate_data.json", conn, "mandate_data")
 
-        if ENVIRONMENT == "development":
-            fetch_data_as_json(conn, "SELECT * FROM mandate_data WHERE mandate_status = 'R'", 'selected_data.json')
+        elif args.insert and args.table:
+            insert_data_from_json(f"{data_path}/{args.insert}", conn, args.table)
+
+        if environment == "development" and args.fetch and args.outfile:
+            fetch_data_as_json(conn, args.fetch, args.outfile)
 
         conn.close()
     except Exception as e:
